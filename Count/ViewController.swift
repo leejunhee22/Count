@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+      @IBOutlet weak var Label: UILabel!
+      var value = 0
+      var flag = 0
       override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,24 @@ class ViewController: UIViewController {
             // Dispose of any resources that can be recreated.
       }
 
-
+      @IBAction func Btn(_ sender: UIButton) {
+            value=value+1
+            Label.text=String(value)
+      }
+      @IBAction func color(_ sender: UIButton) {
+            if(flag==0){
+            Label.textColor=UIColor.blue
+            }
+            else
+            {
+                  Label.textColor=UIColor.red
+            }
+            
+      }
+      @IBAction func Reset(_ sender: UIButton) {
+            value = 0
+            Label.text=String(value)
+      }
+      
 }
 
