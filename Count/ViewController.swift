@@ -30,16 +30,26 @@ class ViewController: UIViewController {
       @IBAction func color(_ sender: UIButton) {
             if(flag==0){
             Label.textColor=UIColor.blue
+                  Label.backgroundColor=UIColor.yellow
+                  flag=1
+            }
+            else if(flag==1)
+            {
+                  Label.textColor=UIColor.red
+                  Label.backgroundColor=UIColor.green
+                  flag=2
             }
             else
             {
-                  Label.textColor=UIColor.red
-            }
-            
-      }
+                  Label.textColor=UIColor.purple
+                  Label.backgroundColor=UIColor.gray
+                  flag=0
+            }}
       @IBAction func Reset(_ sender: UIButton) {
             value = 0
             Label.text=String(value)
+            Label.textColor=UIColor.black
+            Label.backgroundColor=UIColor.white
       }
       
 }
